@@ -4,7 +4,7 @@ import Data.Function
 main :: IO ()
 main = interact $ show . solve . parse
     where parse = last . words
-          solve = length                       -- count valleys
+          solve = length                     -- count valleys
                 . filter (==(-1))
                 . map head                   -- take first element (always 1/0/-1)
                 . groupBy ((==) `on` signum) -- groups with same sign (-/+)
