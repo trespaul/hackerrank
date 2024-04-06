@@ -12,11 +12,12 @@ common warnings
 
 library
     import:           warnings
-    hs-source-dirs:   .
+    hs-source-dirs:   src
     default-language: GHC2021
     build-depends:
         base,
+        matrix,
+        split,
         text,
         unliftio,
-        utility-ht,
-        split
+        utility-ht
